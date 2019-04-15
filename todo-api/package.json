@@ -1,0 +1,26 @@
+{
+  "name": "todo-api",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-loader": "^8.0.5",
+    "serverless-offline": "^4.9.4",
+    "serverless-webpack": "^5.2.0",
+    "webpack": "^4.29.6"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.3",
+    "apollo-server-lambda": "^2.4.8",
+    "graphql": "^14.2.1",
+    "graphql-type-json": "^0.3.0",
+    "mongoose": "^5.5.1"
+  }
+}

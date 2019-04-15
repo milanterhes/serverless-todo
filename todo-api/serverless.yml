@@ -1,0 +1,35 @@
+service: todo-api
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  environment:
+    DB: ${file(./env.json):DB}
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+functions:
+  hello:
+    handler: hello.hello
+    events:
+      - http:
+          path: hello
+          method: get
+  graphql:
+    handler: handler.graphql
+    events:
+      - http:
+          path: graphql
+          method: post
+      - http:
+          path: playground
+          method: any
+
+custom:
+  webpack:
+    webpackConfig: 'webpack.config.js'
+    includeModules: false
+    packager: 'npm'
